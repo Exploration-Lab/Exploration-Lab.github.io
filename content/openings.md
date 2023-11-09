@@ -2,4 +2,4 @@
 title = 'Openings'
 layout = 'single.html'
 +++
-# Openings
+## Coming Soon

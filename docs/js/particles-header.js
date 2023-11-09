@@ -3,7 +3,7 @@ particlesJS('particles-header',
 {
   "particles": {
     "number": {
-      "value": 450,
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 800
