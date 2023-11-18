@@ -1,0 +1,62 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Navbar from '../components/Navbar.astro';
+
+// Constants
+const { frontmatter, url } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<MainHead />
+	</head>
+	<body>
+		<Navbar />
+        <div class="container">
+			<slot />
+			<div class="row">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					{frontmatter.items.map(item => (
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id={item.key + "-tab"} data-bs-toggle="tab" data-bs-target={"#" + item.key} type="button" role="tab" aria-controls={item.key} aria-selected="false">{item.title}</button>
+						</li>
+					))}
+				  </ul>
+				  <div class="tab-content p-0 pt-2" id="myTabContent">
+					{frontmatter.items.map(item => (
+						<div class="tab-pane fade" id={item.key} role="tabpanel" aria-labelledby={item.key + "-tab"}>
+							{frontmatter[item.key].map(row => (
+								<a href={row.link} style="text-decoration: none;">
+									<div class="card" style="max-width: 100%;">
+										<div class="row g-0">
+											<div class="col-md-2">
+											<img src="..." class="img-fluid rounded-start" alt="...">
+											</div>
+											<div class="col-md-10">
+											<div class="card-body">
+												<h5 class="card-title">{row.title}</h5>
+												<p class="card-text">
+													{row.authors}<br>
+													<span style="font-style: italic;">{row.conference}</span>
+												</p>
+											</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							))}
+							
+						</div>
+					))}
+					<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+				  </div>
+			</div>
+        </div>
+		<script>
+			import 'bootstrap/js/dist/tab'
+		</script>
+	</body>
+</html>

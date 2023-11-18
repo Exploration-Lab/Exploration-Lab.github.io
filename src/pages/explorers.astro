@@ -1,0 +1,251 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Navbar from '../components/Navbar.astro';
+
+// Constants
+const { title = 'Explorers' } = Astro.props;
+const pis = [
+	{
+		name: '',
+		link: '',
+		photo: '',
+		desc: ''
+	},
+	{
+		name: 'Dr. Ashutosh Modi',
+		link: 'https://ashutosh-modi.github.io/',
+		photo: 'https://ashutosh-modi.github.io/pictures/Ashutosh-New.jpg',
+		desc: 'Assistant Professor (Department of Computer Science Engineering - IIT Kanpur)'
+	},
+]
+const phds = [
+	{
+		name: 'Abhinav Joshi',
+		link: 'https://www.cse.iitk.ac.in/users/ajoshi/',
+		photo: 'https://www.cse.iitk.ac.in/users/ajoshi/images/self_image.png',
+		desc: '2020 (Computer Science Engineering - IIT Kanpur)'
+	},
+	{
+		name: 'Divyaksh Shukla',
+		link: 'https://divyakshshukla.com',
+		photo: 'https://www.cse.iitk.ac.in/profileimages/divyaksh.jpg',
+		desc: '2023 (Computer Science Engineering - IIT Kanpur)'
+	},
+	{
+		name: 'Sanjeet Singh',
+		link: 'https://sites.google.com/view/sanjeet-singh/',
+		photo: 'https://www.cse.iitk.ac.in/profileimages/sanjeet.jpg',
+		desc: '2023 (Computer Science Engineering - IIT Kanpur)'
+	},
+	{
+		name: 'Pushkar Bharadwaj Singh',
+		link: '#',
+		photo: '/img/team/pushkarb_sq.jpg',
+		desc: '2023 (Computer Science Engineering - IIT Kanpur)'
+	}
+];
+const grads = [
+	{
+		name: 'Vaibhav Sharma',
+		link: '#',
+		photo: 'https://www.cse.iitk.ac.in/profileimages/default.png',
+		desc: 'MS-Research 2022 (Computer Science Engineering - IIT Kanpur)'
+	},
+	{
+		name: 'Dhananjay Sanjay Ghumare',
+		link: '#',
+		photo: 'https://www.cse.iitk.ac.in/profileimages/default.png',
+		desc: 'MS-Research 2022 (Computer Science Engineering - IIT Kanpur)'
+	},
+	{
+		name: 'Bhavya Gupta',
+		link: '#',
+		photo: 'https://www.cse.iitk.ac.in/profileimages/default.png',
+		desc: 'MTech 2022 (Computer Science Engineering - IIT Kanpur)'
+	}
+];
+const ugs = [];
+const ras = [];
+---
+
+<html lang="en">
+	<head>
+		<MainHead />
+	</head>
+	<body>
+		<Navbar />
+        <div class="container">
+			<div class="accordion" id="accordionExplorers">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panel-piHeading">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-piCollapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+						<h5>PI / Professors</h5>
+						</button>
+					</h2>
+					<div id="panel-piCollapse" class="accordion-collapse collapse show" aria-labelledby="panel-piHeading">
+						<div class="accordion-body">
+							<div class="row">
+								{pis.map((student) => {if (student.desc == '') return (<div class="col-md-4"></div>); else return(
+									<div class="col-md-4">
+										<a href={student.link} target="_blank" style="text-decoration: none;">
+											<div class="card mb-3" style="max-width: 540px;">
+												<div class="row g-0">
+													<div class="col-md-4">
+														<img src={student.photo} class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h5 class="card-title">{student.name}</h5>
+															<p class="card-text">{student.desc}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								)})}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panel-phdHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-phdCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<h5>PhD Students</h5>
+						</button>
+					</h2>
+					<div id="panel-phdCollapse" class="accordion-collapse collapse" aria-labelledby="panel-phdHeading">
+						<div class="accordion-body">
+							<div class="row">
+								{phds.map((student) => (
+									<div class="col-md-4">
+										<a href={student.link} target="_blank" style="text-decoration: none;">
+											<div class="card mb-3" style="max-width: 540px;">
+												<div class="row g-0">
+													<div class="col-md-4">
+														<img src={student.photo} class="img-fluid rounded-start" style="height: " alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h5 class="card-title">{student.name}</h5>
+															<p class="card-text">{student.desc}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panel-gradHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-gradCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<h5>Graduate Students</h5>
+						</button>
+					</h2>
+					<div id="panel-gradCollapse" class="accordion-collapse collapse" aria-labelledby="panel-gradHeading">
+						<div class="accordion-body">
+							<div class="row">
+								{grads.map((student) => (
+									<div class="col-md-4">
+										<a href={student.link} target="_blank" style="text-decoration: none;">
+											<div class="card mb-3" style="max-width: 540px;">
+												<div class="row g-0">
+													<div class="col-md-4">
+														<img src={student.photo} class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h5 class="card-title">{student.name}</h5>
+															<p class="card-text">{student.desc}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panel-ugHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-ugCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<h5>Under-Graduate Students</h5>
+						</button>
+					</h2>
+					<div id="panel-ugCollapse" class="accordion-collapse collapse" aria-labelledby="panel-ugHeading">
+						<div class="accordion-body">
+							<div class="row">
+								{ugs.map((student) => (
+									<div class="col-md-4">
+										<a href={student.link} target="_blank" style="text-decoration: none;">
+											<div class="card mb-3" style="max-width: 540px;">
+												<div class="row g-0">
+													<div class="col-md-4">
+														<img src={student.photo} class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h5 class="card-title">{student.name}</h5>
+															<p class="card-text">{student.desc}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panel-raHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-raCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<h5>Research Assistants</h5>
+						</button>
+					</h2>
+					<div id="panel-raCollapse" class="accordion-collapse collapse" aria-labelledby="panel-raHeading">
+						<div class="accordion-body">
+							<div class="row">
+								{ras.map((student) => (
+									<div class="col-md-4">
+										<a href={student.link} target="_blank" style="text-decoration: none;">
+											<div class="card mb-3" style="max-width: 540px;">
+												<div class="row g-0">
+													<div class="col-md-4">
+														<img src={student.photo} class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h5 class="card-title">{student.name}</h5>
+															<p class="card-text">{student.desc}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+        </div>
+		<script>
+			import 'bootstrap/js/dist/collapse'
+		</script>
+	</body>
+</html>

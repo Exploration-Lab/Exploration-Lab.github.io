@@ -1,0 +1,41 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Navbar from '../components/Navbar.astro';
+
+// Constants
+const { title = 'Research Areas' } = Astro.props;
+
+const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a, b) => a.frontmatter.priority-b.frontmatter.priority);
+---
+
+<html lang="en">
+	<head>
+		<MainHead />
+	</head>
+	<body>
+		<Navbar />
+        <div class="container">
+			<h1>Research Areas</h1>
+			{researchAreas.map(area => (
+				<div class="row mb-3">
+					<a href={area.url} style="text-decoration: none;">
+						<div class="card" style="max-width: 100%;">
+							<div class="row g-0">
+								<div class="col-md-1">
+									<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="...">
+								</div>
+								<div class="col-md-11">
+								<div class="card-body">
+									<h5 class="card-title">{area.frontmatter.title}</h5>
+									<p class="card-text">{area.frontmatter.description}</p>
+								</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			))}
+        </div>
+	</body>
+</html>
