@@ -1,0 +1,21 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Navbar from '../components/Navbar.astro';
+
+// Constants
+const { title = 'Contact' } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<MainHead />
+	</head>
+	<body>
+		<Navbar />
+        <div class="container">
+
+            <h1>{title}</h1>
+        </div>
+	</body>
+</html>
