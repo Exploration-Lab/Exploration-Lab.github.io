@@ -2,6 +2,7 @@
 // imports
 import "bootstrap/dist/css/bootstrap.min.css";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+import '../scss/index.scss';
 
 // Component Imports
 import MainHead from '../components/MainHead.astro';
@@ -22,14 +23,14 @@ const { title = 'Exploration Lab' } = Astro.props;
 			<div id="particles">
 				<div class="container">
 					<div id="homepage-content" style="display: none">
-						<h1 style="font-size:100px; z-index: 2; position: relative">
+						<h1 id="index-title">
 							<span style="color: #00d">{"\\(\\mathop{\\mathbb{E}}\\)"}</span>{"\\(\\mathbf{xploration}\\) "}<span style="color: #d00">{"\\(\\mathcal{L}\\)"}</span>{"\\(\\mathbf{ab}\\)"}
 						</h1>
 						<div>
 							<img style="z-index: 2; position: relative" src="img/logo3.png" width="200px">
 						</div>
 						<div>
-							<h3 style="z-index: 1; position: relative; background-color: white; padding: 8px 2px; font-weight:300; margin-bottom: 8ch">Exploring nature through data</h3>
+							<h3 style="margin-bottom: 8ch"><span style="z-index: 1; position: relative; background-color: white; padding: 8px 2px; font-weight:300;">Exploring nature through data</span></h3>
 						</div>
 						<a style="z-index: 1; position: relative" type="button" class="btn btn-lg" href="/about"><img style="width: 4ch" src="/img/about.png"><br>About</a>
 						<a style="z-index: 1; position: relative" type="button" class="btn btn-lg" href="/research-areas"><img style="width: 4ch" src="/img/testtube.png"><br>Research</a>

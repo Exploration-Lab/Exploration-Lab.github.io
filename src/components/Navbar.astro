@@ -1,12 +1,13 @@
 ---
 // import 'bootstrap/dist/css/bootstrap.css'
+const {active} = Astro.props;
 ---
 
 <nav class="navbar navbar-expand-md sticky-top navbar-shrink py-3 navbar-light" id="mainNav">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/">
             <span class="bs-icon-sm bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: var(--bs-white);">
-                <img style="width:5ch" src="/img/logo3.png">
+                <img style="width:4ch" src="/img/logo4.png">
             </span>
             <!-- <span>Exploration-Lab</span> -->
         </a>
@@ -16,15 +17,18 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav ms-auto">
                 <!-- <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/research-areas">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="/explorers">Explorers</a></li>
-                <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="/openings">Openings</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "about"}]} href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "research"}]} href="/research-areas">Research</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "courses"}]} href="/courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "explorers"}]} href="/explorers">Explorers</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "news"}]} href="/news">News</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "openings"}]} href="/openings">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" class:list={[{active: active == "contact"}]} href="/contact">Contact</a></li>
                 <!-- <li class="nav-item"></li> -->
             </ul>
         </div>
     </div>
+    <script>
+        import 'bootstrap/js/dist/collapse'
+    </script>
 </nav>

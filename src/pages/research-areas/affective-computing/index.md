@@ -2,7 +2,7 @@
 layout: '../../../layouts/research-area.astro'
 title: 'Affective Computing'
 priority: 2
-description: 'A small description about Affective Computing'
+description: '[Displayed on intro card] A small description about Affective Computing'
 image: ''
 items: [
     {
@@ -26,7 +26,8 @@ publications: [
         title: 'Publication 1',
         authors: 'Author 1, Author 2',
         conference: '',
-        link: ''
+        link: '',
+        image: ''
     }
 ]
 patents: [
@@ -35,7 +36,8 @@ patents: [
         authors: 'Author 1, Author 2',
         details: '',
         description: '',
-        link: ''
+        link: '',
+        image: ''
     }
 ]
 datasets: [
@@ -44,7 +46,8 @@ datasets: [
         description: '',
         paper: '',
         paper-link: '',
-        link: ''
+        link: '',
+        image: ''
     }
 ]
 ---

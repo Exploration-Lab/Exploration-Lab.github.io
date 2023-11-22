@@ -2,7 +2,7 @@
 layout: '../../../layouts/research-area.astro'
 title: 'Legal NLP'
 priority: 1
-description: 'A small description about the things handled in Legal NLP'
+description: '[Displayed on intro card] A small description about the things handled in Legal NLP'
 image: '/img/research/legal-nlp.png'
 items: [
     {
@@ -26,7 +26,8 @@ publications: [
         title: 'Publication 1',
         authors: 'Author 1, Author 2',
         conference: 'Conference 1',
-        link: '#'
+        link: '#',
+        image: ''
     }
 ]
 patents: [
@@ -35,7 +36,8 @@ patents: [
         authors: 'Author 1, Author 2',
         details: 'details',
         description: 'description',
-        link: '#'
+        link: '#',
+        image: ''
     }
 ]
 datasets: [
@@ -44,7 +46,8 @@ datasets: [
         description: 'description',
         paper: 'paper',
         paper-link: '#',
-        link: '#'
+        link: '#',
+        image: ''
     }
 ]
 ---

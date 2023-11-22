@@ -14,7 +14,7 @@ const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a
 		<MainHead />
 	</head>
 	<body>
-		<Navbar />
+		<Navbar active="research" />
         <div class="container">
 			<h1>Research Areas</h1>
 			{researchAreas.map(area => (
@@ -22,10 +22,10 @@ const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a
 					<a href={area.url} style="text-decoration: none;">
 						<div class="card" style="max-width: 100%;">
 							<div class="row g-0">
-								<div class="col-md-1">
-									<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="...">
+								<div class="col-md-1 col-4">
+									<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1; max-height: 8em" alt="">
 								</div>
-								<div class="col-md-11">
+								<div class="col-md-11 col-8">
 								<div class="card-body">
 									<h5 class="card-title">{area.frontmatter.title}</h5>
 									<p class="card-text">{area.frontmatter.description}</p>
