@@ -24,3 +24,20 @@
 #mainNav {
     background-color: white;
 }
+
+// Source mixin
+@mixin make-container() {
+    width: 100%;
+    padding: 0px 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (min-width: 720px) {
+        width: 50%
+    }
+}
+
+// Usage
+.custom-container {
+    @include make-container();
+}
+  

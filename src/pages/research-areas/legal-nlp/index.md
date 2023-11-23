@@ -2,8 +2,9 @@
 layout: '../../../layouts/research-area.astro'
 title: 'Legal NLP'
 priority: 1
-description: '[Displayed on intro card] A small description about the things handled in Legal NLP'
-image: '/img/research/legal-nlp.png'
+description: 'A small description about the things handled in Legal NLP'
+image: '/img/research/legal-ai-area-thumbnail.jpeg'
+# image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
     {
         key: 'publications',

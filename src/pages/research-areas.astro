@@ -1,4 +1,8 @@
 ---
+// imports
+import '../scss/global.scss';
+import '../scss/research-areas.scss';
+
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
@@ -15,22 +19,35 @@ const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a
 	</head>
 	<body>
 		<Navbar active="research" />
-        <div class="container">
+        <div class="custom-container">
 			<h1>Research Areas</h1>
+			
 			{researchAreas.map(area => (
 				<div class="row mb-3">
 					<a href={area.url} style="text-decoration: none;">
-						<div class="card" style="max-width: 100%;">
-							<div class="row g-0">
-								<div class="col-md-1 col-4">
-									<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1; max-height: 8em" alt="">
-								</div>
-								<div class="col-md-11 col-8">
-								<div class="card-body">
-									<h5 class="card-title">{area.frontmatter.title}</h5>
-									<p class="card-text">{area.frontmatter.description}</p>
-								</div>
-								</div>
+						<div class="card border-light" style="max-width: 100%;">
+							<div class="row">
+								{(area.frontmatter.priority %2 != 0) ? (
+									<div class="col-md-5 col-4">
+										<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="">
+									</div>
+									<div class="col-md-7 col-8 d-flex align-items-center">
+										<div class="card-body">	
+											<h5 class="card-title">{area.frontmatter.title}</h5>
+											<p class="card-text">{area.frontmatter.description}</p>
+										</div>
+									</div>
+								) : (
+									<div class="col-md-7 col-8 d-flex align-items-center">
+										<div class="card-body">
+											<h5 class="card-title">{area.frontmatter.title}</h5>
+											<p class="card-text">{area.frontmatter.description}</p>
+										</div>
+									</div>
+									<div class="col-md-5 col-4">
+										<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="">
+									</div>
+								)}
 							</div>
 						</div>
 					</a>

@@ -2,8 +2,8 @@
 layout: '../../../layouts/research-area.astro'
 title: 'Affective Computing'
 priority: 2
-description: '[Displayed on intro card] A small description about Affective Computing'
-image: ''
+description: 'A small description about Affective Computing'
+image: '/img/research/Affective-computing.jpg'
 items: [
     {
         key: 'publications',

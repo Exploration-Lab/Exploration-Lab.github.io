@@ -1,4 +1,6 @@
 ---
+import '../scss/global.scss';
+import '../scss/explorers.scss';
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
@@ -75,7 +77,7 @@ const ras = [];
 	</head>
 	<body>
 		<Navbar active="explorers" />
-        <div class="container">
+        <div class="custom-container">
 			<div class="accordion" id="accordionExplorers">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panel-piHeading">
@@ -87,17 +89,16 @@ const ras = [];
 						<div class="accordion-body">
 							<div class="row">
 								{pis.map((student) => {if (student.desc == '') return (<div class="col-md-4"></div>); else return(
-									<div class="col-md-4">
+									<div class="col-md-12">
 										<a href={student.link} target="_blank" style="text-decoration: none;">
-											<div class="card mb-3" style="max-width: 540px;">
+											<div class="card mb-3">
 												<div class="row g-0">
-													<div class="col-md-4">
+													<div class="col-4">
 														<img src={student.photo} class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-8">
+													<div class="col-8 d-flex align-items-center">
 														<div class="card-body">
 															<h5 class="card-title">{student.name}</h5>
-															<p class="card-text">{student.desc}</p>
 														</div>
 													</div>
 												</div>
@@ -111,25 +112,24 @@ const ras = [];
 				</div>
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panel-phdHeading">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-phdCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-phdCollapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 						<h5>PhD Students</h5>
 						</button>
 					</h2>
-					<div id="panel-phdCollapse" class="accordion-collapse collapse" aria-labelledby="panel-phdHeading">
+					<div id="panel-phdCollapse" class="accordion-collapse collapse show" aria-labelledby="panel-phdHeading">
 						<div class="accordion-body">
 							<div class="row">
 								{phds.map((student) => (
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<a href={student.link} target="_blank" style="text-decoration: none;">
 											<div class="card mb-3" style="max-width: 540px;">
 												<div class="row g-0">
-													<div class="col-md-4">
+													<div class="col-4">
 														<img src={student.photo} class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-8">
+													<div class="col-8 d-flex align-items-center">
 														<div class="card-body">
 															<h5 class="card-title">{student.name}</h5>
-															<p class="card-text">{student.desc}</p>
 														</div>
 													</div>
 												</div>
@@ -144,25 +144,24 @@ const ras = [];
 
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panel-gradHeading">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-gradCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-gradCollapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 						<h5>Graduate Students</h5>
 						</button>
 					</h2>
-					<div id="panel-gradCollapse" class="accordion-collapse collapse" aria-labelledby="panel-gradHeading">
+					<div id="panel-gradCollapse" class="accordion-collapse collapse show" aria-labelledby="panel-gradHeading">
 						<div class="accordion-body">
 							<div class="row">
 								{grads.map((student) => (
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<a href={student.link} target="_blank" style="text-decoration: none;">
 											<div class="card mb-3" style="max-width: 540px;">
 												<div class="row g-0">
-													<div class="col-md-4">
+													<div class="col-4">
 														<img src={student.photo} class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-8">
+													<div class="col-8 d-flex align-items-center">
 														<div class="card-body">
 															<h5 class="card-title">{student.name}</h5>
-															<p class="card-text">{student.desc}</p>
 														</div>
 													</div>
 												</div>
@@ -177,25 +176,24 @@ const ras = [];
 
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panel-ugHeading">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-ugCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-ugCollapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 						<h5>Under-Graduate Students</h5>
 						</button>
 					</h2>
-					<div id="panel-ugCollapse" class="accordion-collapse collapse" aria-labelledby="panel-ugHeading">
+					<div id="panel-ugCollapse" class="accordion-collapse collapse show" aria-labelledby="panel-ugHeading">
 						<div class="accordion-body">
 							<div class="row">
 								{ugs.map((student) => (
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<a href={student.link} target="_blank" style="text-decoration: none;">
 											<div class="card mb-3" style="max-width: 540px;">
 												<div class="row g-0">
-													<div class="col-md-4">
+													<div class="col-4">
 														<img src={student.photo} class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-8">
+													<div class="col-8 d-flex align-items-center">
 														<div class="card-body">
 															<h5 class="card-title">{student.name}</h5>
-															<p class="card-text">{student.desc}</p>
 														</div>
 													</div>
 												</div>
@@ -210,25 +208,24 @@ const ras = [];
 
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panel-raHeading">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-raCollapse" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-raCollapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 						<h5>Research Assistants</h5>
 						</button>
 					</h2>
-					<div id="panel-raCollapse" class="accordion-collapse collapse" aria-labelledby="panel-raHeading">
+					<div id="panel-raCollapse" class="accordion-collapse collapse show" aria-labelledby="panel-raHeading">
 						<div class="accordion-body">
 							<div class="row">
 								{ras.map((student) => (
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<a href={student.link} target="_blank" style="text-decoration: none;">
 											<div class="card mb-3" style="max-width: 540px;">
 												<div class="row g-0">
-													<div class="col-md-4">
+													<div class="col-4">
 														<img src={student.photo} class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-8">
+													<div class="col-8 d-flex align-items-center">
 														<div class="card-body">
 															<h5 class="card-title">{student.name}</h5>
-															<p class="card-text">{student.desc}</p>
 														</div>
 													</div>
 												</div>
