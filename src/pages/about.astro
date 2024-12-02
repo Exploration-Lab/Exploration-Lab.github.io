@@ -27,177 +27,86 @@ const title = 'About';
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        .hero-section {
-            background: linear-gradient(120deg, #3498db, #8e44ad);
-            color: #fff;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        .hero-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .hero-section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-        .areas-section, .focus-section {
-            margin-top: 3rem;
-        }
-        .areas-section h2, .focus-section h2 {
-            color: #34495e;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .areas-section ul, .focus-section ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-        .areas-section li, .focus-section li {
-            margin: 1rem;
-            background: #ffffff;
-            color: #2c3e50;
-            padding: 1.2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 280px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .areas-section li:hover, .focus-section li:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .areas-section li h3, .focus-section li h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            color: #2980b9;
-        }
-        .areas-section li p, .focus-section li p {
-            font-size: 0.95rem;
-            color: #7f8c8d;
-        }
-        .cta-section {
-            text-align: center;
-            margin-top: 3rem;
-        }
-        .cta-section a {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: #e74c3c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-        .cta-section a:hover {
-            background: #c0392b;
-        }
-        .animated-image {
-            display: block;
-            margin: 2rem auto;
+        .slideshow-container {
+            position: relative;
             max-width: 100%;
+            margin: auto;
+            overflow: hidden;
             border-radius: 12px;
+        }
+        .slide {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .about-section {
+            margin-top: 2rem;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            color: #34495e;
+            line-height: 1.8;
+            text-align: justify;
         }
     </style>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        document.addEventListener("DOMContentLoaded", showSlides);
+    </script>
 </head>
 <body>
     <Navbar active="about" />
     <div class="custom-container">
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <h2>Welcome to the Exploration Lab</h2>
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG_9262.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG20240407135521.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG_9262.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h1>About Us</h1>
             <p>
-                Located in the prestigious Computer Science Department at IIT Kanpur, the Exploration Lab is a hub for innovation and cutting-edge research in Artificial Intelligence. Our mission is to push the boundaries of technology and contribute to solving real-world problems with AI.
+                Welcome to the Exploration Lab at IIT Kanpur! We specialize in Natural Language Understanding, 
+                working on innovative ways to help machines better understand and interpret text. Our research covers 
+                diverse areas, including:
+            </p>
+            <ul>
+                <li><b>Multimodal Machine Learning:</b> Combining data like text and images for smarter systems.</li>
+                <li><b>Commonsense Reasoning:</b> Teaching machines basic human reasoning for natural interactions.</li>
+                <li><b>Legal Text Processing:</b> Simplifying complex legal documents with AI tools.</li>
+                <li><b>Sign Language Processing:</b> Building systems to understand and translate sign languages.</li>
+                <li><b>Machine Unlearning:</b> Letting AI forget specific data while maintaining performance.</li>
+                <li><b>Ethics in NLP:</b> Designing fair and transparent NLP systems with ethical principles.</li>
+            </ul>
+            <p>
+                We aim to push the boundaries of AI research and create technologies that make a real-world impact.
             </p>
         </div>
-
-        <!-- Research Directions -->
-        <div class="areas-section">
-            <h2>Our Research Directions</h2>
-            <ul>
-                <li>
-                    <h3>Affective Computing</h3>
-                    <p>Exploring emotional intelligence in machines to enhance human-computer interaction.</p>
-                </li>
-                <li>
-                    <h3>Machine Comprehension</h3>
-                    <p>Advancing the ability of machines to understand and process human language effectively.</p>
-                </li>
-                <li>
-                    <h3>Commonsense Knowledge in NLP</h3>
-                    <p>Building AI systems with the reasoning capability of a human mind.</p>
-                </li>
-                <li>
-                    <h3>Multimodal NLP</h3>
-                    <p>Integrating visual, auditory, and textual inputs for richer language understanding.</p>
-                </li>
-                <li>
-                    <h3>Natural Language Understanding</h3>
-                    <p>Creating intelligent systems that comprehend text, semantics, and context.</p>
-                </li>
-                <li>
-                    <h3>Legal NLP</h3>
-                    <p>Empowering AI to process and analyze complex legal documents effectively.</p>
-                </li>
-                <li>
-                    <h3>Sign Language Understanding</h3>
-                    <p>Bridging the communication gap for the hearing impaired with AI.</p>
-                </li>
-                <li>
-                    <h3>Computational Morality</h3>
-                    <p>Embedding ethical reasoning capabilities in AI systems.</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Current Focus -->
-        <div class="focus-section">
-            <h2>Our Current Focus Areas</h2>
-            <ul>
-                <li>
-                    <h3>Affective Computing</h3>
-                    <p>Developing emotion-aware applications to improve user experience.</p>
-                </li>
-                <li>
-                    <h3>Legal NLP & Machine Learning</h3>
-                    <p>Transforming legal document processing with advanced NLP techniques.</p>
-                </li>
-                <li>
-                    <h3>Multimodal Machine Learning</h3>
-                    <p>Fusing text, images, and audio for groundbreaking AI innovations.</p>
-                </li>
-                <li>
-                    <h3>Text-Based Environments</h3>
-                    <p>Leveraging Deep Reinforcement Learning for virtual decision-making systems.</p>
-                </li>
-                <li>
-                    <h3>Sign Language Processing</h3>
-                    <p>Creating real-time sign language translation systems to aid communication.</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="cta-section">
-            <h2>Explore More</h2>
-            <p>Check out our latest publications and research findings on these exciting topics.</p>
-            <a href="#">View Publications</a>
-        </div>
-
-        <!-- Decorative Animated Image -->
-        <img
-            src="https://via.placeholder.com/800x400"
-            alt="Exploration Lab AI Illustration"
-            class="animated-image"
-        />
     </div>
 </body>
 </html>
