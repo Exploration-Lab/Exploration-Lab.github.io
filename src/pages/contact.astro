@@ -4,18 +4,121 @@ import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
 
 // Constants
-const { title = 'Contact' } = Astro.props;
+const title = 'Contact';
 ---
 
 <html lang="en">
-	<head>
-		<MainHead />
-	</head>
-	<body>
-		<Navbar active="contact" />
-        <div class="custom-container">
+<head>
+    <MainHead />
+    <style>
+        .custom-container {
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+        }
+        .contact-section {
+            margin: 2rem 0;
+        }
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .contact-section p {
+            line-height: 1.6;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <Navbar active="contact" />
+    <div class="custom-container">
+        <h1>{title}</h1>
 
-            <h1>{title}</h1>
+        <!-- Office Address Section -->
+        <div class="contact-section">
+            <h2>Office Address</h2>
+            <p>
+                RM-503, <br />
+                Computer Science and Engineering Department, <br />
+                Indian Institute of Technology Kanpur (IIT Kanpur) <br />
+                Kanpur, 208016, Uttar Pradesh, India
+            </p>
         </div>
-	</body>
+
+        <!-- Map Section -->
+        <div class="contact-section">
+            <h2>Find Us on the Map</h2>
+            <p>Locate our office easily using this <a href="https://goo.gl/maps/example-link" target="_blank">Google Maps link</a>.</p>
+        </div>
+
+        <!-- Phone Section -->
+        <div class="contact-section">
+            <h2>Phone</h2>
+            <p>Call us at: <span class="highlight">+91-512-259/333/679-2131</span></p>
+        </div>
+
+        <!-- Schedule Meeting Section -->
+        <div class="contact-section">
+            <h2>Schedule A Meeting</h2>
+            <p>
+                If you wish to meet, please <a href="https://example-scheduling-link.com" target="_blank">schedule a meeting here</a>.
+            </p>
+            <p class="highlight">Note for Students/Researchers/PostDocs:</p>
+            <ul>
+                <li>For course-related queries: <span class="highlight">Refer to office hours mentioned on the course webpage.</span></li>
+                <li>For research internships, fill out this <a href="https://example-form-link.com" target="_blank">FORM</a>.</li>
+                <li>Emails regarding internships will be automatically flagged as spam.</li>
+            </ul>
+        </div>
+
+        <!-- Research Interest Section -->
+        <div class="contact-section">
+            <h2>Research Opportunities</h2>
+            <p>Thank you for your interest! Please note:</p>
+            <ul>
+                <li>No short-term internships are offered (minimum 6 months required).</li>
+                <li>Submit your application via the <a href="https://example-form-link.com" target="_blank">FORM</a>.</li>
+                <li>Ensure proper subject lines for your emails:</li>
+            </ul>
+            <ul>
+                <li><strong>[PURSUE_UGP]</strong> - Undergraduate Projects</li>
+                <li><strong>[PURSUE_MTECH_THESIS]</strong> - M.Tech Thesis</li>
+                <li><strong>[PURSUE_PHD]</strong> - Ph.D. Positions</li>
+                <li><strong>[PURSUE_RESEARCH_ASSISTANT]</strong> - Research Assistant Positions</li>
+                <li><strong>[POSTDOC]</strong> - Postdoc Positions</li>
+            </ul>
+            <p>Please avoid lengthy emails; focus on your research experience and include a link to your CV (no attachments).</p>
+        </div>
+
+        <!-- Contact Options Section -->
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <ul>
+                <li><a href="mailto:example@iitk.ac.in" target="_blank">Email</a></li>
+                <li><a href="https://example-snailmail-link.com" target="_blank">Snail Mail</a></li>
+            </ul>
+            <h2>Connect with Me</h2>
+            <ul>
+                <li><a href="https://twitter.com/example" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
