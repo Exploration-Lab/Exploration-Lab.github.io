@@ -1,8 +1,8 @@
 ---
 layout: '../../../layouts/research-area.astro'
-title: 'Indian Sign Language Generation and Translation'
+title: 'Machine Unlearning'
 priority: 1
-description: 'A small description about the things handled in Sign '
+description: 'A small description about the things handled in Legal NLP'
 image: '/img/research/legal-ai-area-thumbnail.jpeg'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
