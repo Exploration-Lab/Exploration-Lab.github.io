@@ -14,7 +14,7 @@ const title = 'About';
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
         }
         .custom-container {
             max-width: 1200px;
@@ -33,6 +33,7 @@ const title = 'About';
             margin: auto;
             overflow: hidden;
             border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .slide {
             display: none;
@@ -42,6 +43,23 @@ const title = 'About';
             height: auto;
             border-radius: 12px;
         }
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #717171;
+        }
         .about-section {
             margin-top: 2rem;
             background: #ffffff;
@@ -49,24 +67,33 @@ const title = 'About';
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .about-section p {
-            font-size: 1.1rem;
+        .about-section ul {
+            padding: 0;
+            margin: 1rem 0;
+            list-style: none;
+        }
+        .about-section ul li {
+            font-size: 1rem;
             color: #34495e;
-            line-height: 1.8;
-            text-align: justify;
+            margin-bottom: 0.5rem;
         }
     </style>
     <script>
         let slideIndex = 0;
         function showSlides() {
             let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
         }
         document.addEventListener("DOMContentLoaded", showSlides);
     </script>
@@ -77,14 +104,19 @@ const title = 'About';
         <!-- Slideshow Section -->
         <div class="slideshow-container">
             <div class="slide">
-                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG_9262.jpg" alt="Slide 1">
+                <img src="/img/EL-Gallery/IMG_9262.jpg" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG20240407135521.jpg" alt="Slide 2">
+                <img src="/img/EL-Gallery/IMG20240407135521.jpg" alt="Slide 2">
             </div>
             <div class="slide">
-                <img src="/DATA2/sanjeet/Exploration-Lab.github.io/public/img/EL-Gallary/IMG_9262.jpg" alt="Slide 3">
+                <img src="/img/EL-Gallery/IMG_9262.jpg" alt="Slide 3">
             </div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
         <!-- About Section -->
@@ -92,19 +124,18 @@ const title = 'About';
             <h1>About Us</h1>
             <p>
                 Welcome to the Exploration Lab at IIT Kanpur! We specialize in Natural Language Understanding, 
-                working on innovative ways to help machines better understand and interpret text. Our research covers 
-                diverse areas, including:
+                working on innovative ways to help machines better interpret and process human language. Our research spans various cutting-edge areas, including:
             </p>
             <ul>
-                <li><b>Multimodal Machine Learning:</b> Combining data like text and images for smarter systems.</li>
-                <li><b>Commonsense Reasoning:</b> Teaching machines basic human reasoning for natural interactions.</li>
-                <li><b>Legal Text Processing:</b> Simplifying complex legal documents with AI tools.</li>
-                <li><b>Sign Language Processing:</b> Building systems to understand and translate sign languages.</li>
-                <li><b>Machine Unlearning:</b> Letting AI forget specific data while maintaining performance.</li>
-                <li><b>Ethics in NLP:</b> Designing fair and transparent NLP systems with ethical principles.</li>
+                <li><b>Multimodal Machine Learning:</b> Combining diverse data like text, images, and audio.</li>
+                <li><b>Commonsense Reasoning:</b> Teaching machines human-like reasoning skills.</li>
+                <li><b>Legal Text Processing:</b> Simplifying and analyzing complex legal documents.</li>
+                <li><b>Sign Language Processing:</b> Creating tools for sign language understanding and translation.</li>
+                <li><b>Machine Unlearning:</b> Allowing AI to selectively "forget" data while maintaining performance.</li>
+                <li><b>Ethics in NLP:</b> Building fair, unbiased, and transparent AI systems.</li>
             </ul>
             <p>
-                We aim to push the boundaries of AI research and create technologies that make a real-world impact.
+                Our mission is to advance AI technologies and solve real-world problems through groundbreaking research.
             </p>
         </div>
     </div>
