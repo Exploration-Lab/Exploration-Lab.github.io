@@ -4,18 +4,200 @@ import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
 
 // Constants
-const { title = 'About' } = Astro.props;
+const title = 'About';
 ---
-
 <html lang="en">
-	<head>
-		<MainHead />
-	</head>
-	<body>
-		<Navbar active="about" />
-        <div class="custom-container">
-
-            <h1>{title}</h1>
+<head>
+    <MainHead />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .custom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero-section {
+            background: linear-gradient(120deg, #3498db, #8e44ad);
+            color: #fff;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .areas-section, .focus-section {
+            margin-top: 3rem;
+        }
+        .areas-section h2, .focus-section h2 {
+            color: #34495e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .areas-section ul, .focus-section ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .areas-section li, .focus-section li {
+            margin: 1rem;
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .areas-section li:hover, .focus-section li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .areas-section li h3, .focus-section li h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: #2980b9;
+        }
+        .areas-section li p, .focus-section li p {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .cta-section a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        .cta-section a:hover {
+            background: #c0392b;
+        }
+        .animated-image {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <Navbar active="about" />
+    <div class="custom-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h2>Welcome to the Exploration Lab</h2>
+            <p>
+                Located in the prestigious Computer Science Department at IIT Kanpur, the Exploration Lab is a hub for innovation and cutting-edge research in Artificial Intelligence. Our mission is to push the boundaries of technology and contribute to solving real-world problems with AI.
+            </p>
         </div>
-	</body>
+
+        <!-- Research Directions -->
+        <div class="areas-section">
+            <h2>Our Research Directions</h2>
+            <ul>
+                <li>
+                    <h3>Affective Computing</h3>
+                    <p>Exploring emotional intelligence in machines to enhance human-computer interaction.</p>
+                </li>
+                <li>
+                    <h3>Machine Comprehension</h3>
+                    <p>Advancing the ability of machines to understand and process human language effectively.</p>
+                </li>
+                <li>
+                    <h3>Commonsense Knowledge in NLP</h3>
+                    <p>Building AI systems with the reasoning capability of a human mind.</p>
+                </li>
+                <li>
+                    <h3>Multimodal NLP</h3>
+                    <p>Integrating visual, auditory, and textual inputs for richer language understanding.</p>
+                </li>
+                <li>
+                    <h3>Natural Language Understanding</h3>
+                    <p>Creating intelligent systems that comprehend text, semantics, and context.</p>
+                </li>
+                <li>
+                    <h3>Legal NLP</h3>
+                    <p>Empowering AI to process and analyze complex legal documents effectively.</p>
+                </li>
+                <li>
+                    <h3>Sign Language Understanding</h3>
+                    <p>Bridging the communication gap for the hearing impaired with AI.</p>
+                </li>
+                <li>
+                    <h3>Computational Morality</h3>
+                    <p>Embedding ethical reasoning capabilities in AI systems.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Current Focus -->
+        <div class="focus-section">
+            <h2>Our Current Focus Areas</h2>
+            <ul>
+                <li>
+                    <h3>Affective Computing</h3>
+                    <p>Developing emotion-aware applications to improve user experience.</p>
+                </li>
+                <li>
+                    <h3>Legal NLP & Machine Learning</h3>
+                    <p>Transforming legal document processing with advanced NLP techniques.</p>
+                </li>
+                <li>
+                    <h3>Multimodal Machine Learning</h3>
+                    <p>Fusing text, images, and audio for groundbreaking AI innovations.</p>
+                </li>
+                <li>
+                    <h3>Text-Based Environments</h3>
+                    <p>Leveraging Deep Reinforcement Learning for virtual decision-making systems.</p>
+                </li>
+                <li>
+                    <h3>Sign Language Processing</h3>
+                    <p>Creating real-time sign language translation systems to aid communication.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Explore More</h2>
+            <p>Check out our latest publications and research findings on these exciting topics.</p>
+            <a href="#">View Publications</a>
+        </div>
+
+        <!-- Decorative Animated Image -->
+        <img
+            src="https://via.placeholder.com/800x400"
+            alt="Exploration Lab AI Illustration"
+            class="animated-image"
+        />
+    </div>
+</body>
 </html>
