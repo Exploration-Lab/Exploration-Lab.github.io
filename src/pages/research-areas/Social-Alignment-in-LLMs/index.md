@@ -1,6 +1,6 @@
 ---
 layout: '../../../layouts/research-area.astro'
-title: 'Common Sense and Casual Reasoning in LLMs'
+title: 'Social Alignment in LLMs'
 priority: 1
 description: 'A small description about the things handled in Legal NLP'
 image: '/img/research/legal-ai-area-thumbnail.jpeg'
