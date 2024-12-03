@@ -14,34 +14,33 @@ const title = 'About';
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #fafafa;
         }
         .custom-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            color: #2c3e50;
         }
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: #34495e;
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         .slideshow-container {
             position: relative;
             max-width: 100%;
-            margin: auto;
+            margin: 1rem auto;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .slide {
             display: none;
+            text-align: center;
         }
         .slide img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
         }
         .dots {
             text-align: center;
@@ -55,27 +54,24 @@ const title = 'About';
             background-color: #bbb;
             border-radius: 50%;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
         .dot.active {
             background-color: #717171;
         }
-        .about-section {
-            margin-top: 2rem;
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .about-section p, .about-section ul {
+            margin: 1rem 0;
+            line-height: 1.6;
         }
         .about-section ul {
-            padding: 0;
-            margin: 1rem 0;
-            list-style: none;
+            padding-left: 1.5rem;
         }
         .about-section ul li {
-            font-size: 1rem;
-            color: #34495e;
+            list-style-type: disc;
             margin-bottom: 0.5rem;
+        }
+        .about-section ul li b {
+            color: #2c3e50;
         }
     </style>
     <script>
@@ -104,13 +100,13 @@ const title = 'About';
         <!-- Slideshow Section -->
         <div class="slideshow-container">
             <div class="slide">
-                <img src="/img/research/Affective-computing.jpg" alt="Slide 1">
+                <img src="/img/EL-Gallary/ACL.jpg" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="/img/EL-Gallary/group-picture.jpg" alt="Slide 2">
+                <img src="/img/EL-Gallary/group-pic.jpg" alt="Slide 2">
             </div>
             <div class="slide">
-                <img src="/img/EL-Gallary/research-day.jpg" alt="Slide 3">
+                <img src="/img/EL-Gallary/signlanguage.jpg" alt="Slide 3">
             </div>
         </div>
         <div class="dots">
