@@ -3,7 +3,7 @@ layout: '../../../layouts/research-area.astro'
 title: 'Machine Unlearning'
 priority: 1
 description: 'A small description about the things handled in Legal NLP'
-image: '/img/research/legal-ai-area-thumbnail.jpeg'
+image: '/img/research/machine-unlearning.png'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
     {

@@ -13,65 +13,58 @@ const title = 'Contact';
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         .custom-container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1rem;
+            line-height: 1.8;
         }
-        h1, h2 {
+        h1 {
+            font-size: 2.5rem;
             color: #2c3e50;
             text-align: center;
+            margin-bottom: 2rem;
         }
-        .contact-section {
-            margin: 2rem 0;
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
         }
-        .contact-section p {
-            line-height: 1.8;
+        p, a {
             font-size: 1rem;
             color: #555;
         }
-        .contact-details {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-        .contact-item {
-            flex: 1;
-            text-align: center;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .contact-item a {
+        a {
+            color: #007bff;
             text-decoration: none;
-            color: #3498db;
-            font-size: 1.1rem;
-            font-weight: bold;
         }
-        .contact-item a:hover {
+        a:hover {
             text-decoration: underline;
         }
-        .contact-item img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 0.5rem;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .social-item img {
+            width: 30px;
+            height: 30px;
+        }
+        .social-item span {
+            font-size: 1rem;
+            color: #555;
         }
     </style>
 </head>
@@ -81,7 +74,7 @@ const title = 'Contact';
         <h1>Contact Us</h1>
 
         <!-- Office Address Section -->
-        <div class="contact-section">
+        <section>
             <h2>Office Address</h2>
             <p>
                 RM-503, <br />
@@ -89,49 +82,50 @@ const title = 'Contact';
                 Indian Institute of Technology Kanpur (IIT Kanpur), <br />
                 Kanpur, 208016, Uttar Pradesh, India.
             </p>
-        </div>
+        </section>
 
         <!-- Phone Section -->
-        <div class="contact-section">
+        <section>
             <h2>Phone</h2>
             <p>Call us at: <strong>+91-512-259/333/679-2131</strong></p>
-        </div>
+        </section>
 
         <!-- Email Section -->
-        <div class="contact-section">
+        <section>
             <h2>Email</h2>
             <p>
-                For inquiries, write to us at: <a href="mailto:example@iitk.ac.in">example@iitk.ac.in</a>
+                For inquiries, write to us at: 
+                <a href="mailto:example@iitk.ac.in">example@iitk.ac.in</a>
             </p>
-        </div>
+        </section>
 
         <!-- Social Media Section -->
-        <div class="contact-section">
+        <section>
             <h2>Connect with Us</h2>
-            <div class="contact-details">
-                <div class="contact-item">
+            <div class="social-links">
+                <a href="https://twitter.com/example" target="_blank" class="social-item">
                     <img src="/icons/twitter-icon.png" alt="Twitter">
-                    <a href="https://twitter.com/example" target="_blank">Twitter</a>
-                </div>
-                <div class="contact-item">
+                    <span>Twitter</span>
+                </a>
+                <a href="https://linkedin.com/in/example" target="_blank" class="social-item">
                     <img src="/icons/linkedin-icon.png" alt="LinkedIn">
-                    <a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-item">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/example" target="_blank" class="social-item">
                     <img src="/icons/github-icon.png" alt="GitHub">
-                    <a href="https://github.com/example" target="_blank">GitHub</a>
-                </div>
+                    <span>GitHub</span>
+                </a>
             </div>
-        </div>
+        </section>
 
         <!-- Map Section -->
-        <div class="contact-section">
+        <section>
             <h2>Find Us on the Map</h2>
             <p>
                 Locate our office easily using this 
                 <a href="https://goo.gl/maps/example-link" target="_blank">Google Maps link</a>.
             </p>
-        </div>
+        </section>
     </div>
 </body>
 </html>

@@ -3,7 +3,7 @@ layout: '../../../layouts/research-area.astro'
 title: 'Common Sense and Casual Reasoning in LLMs'
 priority: 1
 description: 'A small description about the things handled in Legal NLP'
-image: '/img/research/legal-ai-area-thumbnail.jpeg'
+image: '/img/research/common-sense.jpeg'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
     {

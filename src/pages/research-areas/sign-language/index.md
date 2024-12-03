@@ -3,7 +3,7 @@ layout: '../../../layouts/research-area.astro'
 title: 'Indian Sign Language Generation and Translation'
 priority: 1
 description: 'A small description about the things handled in Sign '
-image: '/img/research/legal-ai-area-thumbnail.jpeg'
+image: '/img/research/isl.jpg'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
     {
@@ -52,6 +52,6 @@ datasets: [
     }
 ]
 ---
-# Legal NLP
+# Indian Sign Language
 
-A small description about the things handled in Legal NLP
+A small description about the things handled in Indian Sign Language Generation and Translation
