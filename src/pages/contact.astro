@@ -11,44 +11,74 @@ const title = 'Contact';
 <head>
     <MainHead />
     <style>
-        .custom-container {
-            padding: 2rem;
+        body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .custom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
         }
         .contact-section {
             margin: 2rem 0;
-        }
-        .contact-section h2 {
-            margin-bottom: 1rem;
-            color: #2c3e50;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .contact-section p {
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #555;
         }
-        .highlight {
-            font-weight: bold;
-            color: #e74c3c;
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
         }
-        a {
-            color: #3498db;
+        .contact-item {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .contact-item a {
             text-decoration: none;
+            color: #3498db;
+            font-size: 1.1rem;
+            font-weight: bold;
         }
-        a:hover {
+        .contact-item a:hover {
             text-decoration: underline;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 0.5rem 0;
+        .contact-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
     <Navbar active="contact" />
     <div class="custom-container">
-        <h1>{title}</h1>
+        <h1>Contact Us</h1>
 
         <!-- Office Address Section -->
         <div class="contact-section">
@@ -56,68 +86,51 @@ const title = 'Contact';
             <p>
                 RM-503, <br />
                 Computer Science and Engineering Department, <br />
-                Indian Institute of Technology Kanpur (IIT Kanpur) <br />
-                Kanpur, 208016, Uttar Pradesh, India
+                Indian Institute of Technology Kanpur (IIT Kanpur), <br />
+                Kanpur, 208016, Uttar Pradesh, India.
             </p>
-        </div>
-
-        <!-- Map Section -->
-        <div class="contact-section">
-            <h2>Find Us on the Map</h2>
-            <p>Locate our office easily using this <a href="https://goo.gl/maps/example-link" target="_blank">Google Maps link</a>.</p>
         </div>
 
         <!-- Phone Section -->
         <div class="contact-section">
             <h2>Phone</h2>
-            <p>Call us at: <span class="highlight">+91-512-259/333/679-2131</span></p>
+            <p>Call us at: <strong>+91-512-259/333/679-2131</strong></p>
         </div>
 
-        <!-- Schedule Meeting Section -->
+        <!-- Email Section -->
         <div class="contact-section">
-            <h2>Schedule A Meeting</h2>
+            <h2>Email</h2>
             <p>
-                If you wish to meet, please <a href="https://example-scheduling-link.com" target="_blank">schedule a meeting here</a>.
+                For inquiries, write to us at: <a href="mailto:example@iitk.ac.in">example@iitk.ac.in</a>
             </p>
-            <p class="highlight">Note for Students/Researchers/PostDocs:</p>
-            <ul>
-                <li>For course-related queries: <span class="highlight">Refer to office hours mentioned on the course webpage.</span></li>
-                <li>For research internships, fill out this <a href="https://example-form-link.com" target="_blank">FORM</a>.</li>
-                <li>Emails regarding internships will be automatically flagged as spam.</li>
-            </ul>
         </div>
 
-        <!-- Research Interest Section -->
+        <!-- Social Media Section -->
         <div class="contact-section">
-            <h2>Research Opportunities</h2>
-            <p>Thank you for your interest! Please note:</p>
-            <ul>
-                <li>No short-term internships are offered (minimum 6 months required).</li>
-                <li>Submit your application via the <a href="https://example-form-link.com" target="_blank">FORM</a>.</li>
-                <li>Ensure proper subject lines for your emails:</li>
-            </ul>
-            <ul>
-                <li><strong>[PURSUE_UGP]</strong> - Undergraduate Projects</li>
-                <li><strong>[PURSUE_MTECH_THESIS]</strong> - M.Tech Thesis</li>
-                <li><strong>[PURSUE_PHD]</strong> - Ph.D. Positions</li>
-                <li><strong>[PURSUE_RESEARCH_ASSISTANT]</strong> - Research Assistant Positions</li>
-                <li><strong>[POSTDOC]</strong> - Postdoc Positions</li>
-            </ul>
-            <p>Please avoid lengthy emails; focus on your research experience and include a link to your CV (no attachments).</p>
+            <h2>Connect with Us</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <img src="/icons/twitter-icon.png" alt="Twitter">
+                    <a href="https://twitter.com/example" target="_blank">Twitter</a>
+                </div>
+                <div class="contact-item">
+                    <img src="/icons/linkedin-icon.png" alt="LinkedIn">
+                    <a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <img src="/icons/github-icon.png" alt="GitHub">
+                    <a href="https://github.com/example" target="_blank">GitHub</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Contact Options Section -->
+        <!-- Map Section -->
         <div class="contact-section">
-            <h2>Contact Me</h2>
-            <ul>
-                <li><a href="mailto:example@iitk.ac.in" target="_blank">Email</a></li>
-                <li><a href="https://example-snailmail-link.com" target="_blank">Snail Mail</a></li>
-            </ul>
-            <h2>Connect with Me</h2>
-            <ul>
-                <li><a href="https://twitter.com/example" target="_blank">Twitter</a></li>
-                <li><a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a></li>
-            </ul>
+            <h2>Find Us on the Map</h2>
+            <p>
+                Locate our office easily using this 
+                <a href="https://goo.gl/maps/example-link" target="_blank">Google Maps link</a>.
+            </p>
         </div>
     </div>
 </body>
