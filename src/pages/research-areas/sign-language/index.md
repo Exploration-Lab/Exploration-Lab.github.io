@@ -42,15 +42,14 @@ publications: [
 datasets: [
     {
         title: 'CISLR: Corpus for Indian Sign Language Recognition',
-        description: 'Indian Sign Language, though used by a diverse community, still lacks well-annotated resources for developing systems that would enable sign language processing. In recent years researchers have actively worked for sign languages like American Sign Languages, however, Indian Sign language is still far from data-driven tasks like machine translation. To address this gap, in this paper, we introduce a new dataset CISLR (Corpus for Indian Sign Language Recognition) for word-level recognition in Indian Sign Language using videos. The corpus has a large vocabulary of around 4700 words covering different topics and domains. Further, we propose a baseline model for word recognition from sign language videos. To handle the low resource problem in the Indian Sign Language, the proposed model consists of a prototype-based one-shot learner that leverages resource rich American Sign Language to learn generalized features for improving predictions in Indian Sign Language. Our experiments show that gesture features learned in another sign language can help perform one-shot predictions in CISLR.',
-        paper: 'CISLR: Corpus for Indian Sign Language Recognition',
+        description: '#',
         paper-link: 'https://aclanthology.org/2022.emnlp-main.707/',
         link: 'https://github.com/Exploration-Lab/CISLR',
         image: '/img/Posters/Sign-Language/CISLR.jpg'
     },
     {
         title: 'ISLTranslate: Dataset for Translating Indian Sign Language',
-        description: 'Sign languages are the primary means of communication for many hard-of-hearing people worldwide. Recently, to bridge the communication gap between the hard-of-hearing community and the rest of the population, several sign language translation datasets have been proposed to enable the development of statistical sign language translation systems. However, there is a dearth of sign language resources for the Indian sign language. This resource paper introduces ISLTranslate, a translation dataset for continuous Indian Sign Language (ISL) consisting of 31k ISL-English sentence/phrase pairs. To the best of our knowledge, it is the largest translation dataset for continuous Indian Sign Language. We provide a detailed analysis of the dataset. To validate the performance of existing end-to-end Sign language to spoken language translation systems, we benchmark the created dataset with a transformer-based model for ISL translation.',
+        description: '#',
         paper: 'ISLTranslate: Dataset for Translating Indian Sign Language',
         paper-link: 'https://aclanthology.org/2023.findings-acl.665/',
         link: 'https://github.com/Exploration-Lab/ISLTranslate',
@@ -58,13 +57,15 @@ datasets: [
     },
     {
         title: 'iSign: A Benchmark for Indian Sign Language Processing',
-        description: 'Indian Sign Language has limited resources for developing machine learning and data-driven approaches for automated language processing. Though text/audio-based language processing techniques have shown colossal research interest and tremendous improvements in the last few years, Sign Languages still need to catch up due to the need for more resources. To bridge this gap, in this work, we propose iSign: a benchmark for Indian Sign Language (ISL) Processing. We make three primary contributions to this work. First, we release one of the largest ISL-English datasets with more than video-sentence/phrase pairs. To the best of our knowledge, it is the largest sign language dataset available for ISL. Second, we propose multiple NLP-specific tasks (including SignVideo2Text, SignPose2Text, Text2Pose, Word Prediction, and Sign Semantics) and benchmark them with the baseline models for easier access to the research community. Third, we provide detailed insights into the proposed benchmarks with a few linguistic insights into the working of ISL. We streamline the evaluation of Sign Language processing, addressing the gaps in the NLP research community for Sign Languages.',
+        description: '#',
         paper: 'iSign: A Benchmark for Indian Sign Language Processing',
         paper-link: 'https://aclanthology.org/2024.findings-acl.643/',
         link: 'https://exploration-lab.github.io/iSign/',
         image: '/img/Posters/Sign-Language/iSign.jpg'
     }
 ]
+---
+
 # Indian Sign Language
 
 We are working to improve Indian Sign Language (ISL) processing by creating datasets and models that bridge the communication gap for the hard-of-hearing community. ISL, used by millions, lacks the resources needed for tasks like machine translation and recognition, leaving it behind languages such as American Sign Language. To address this, we developed CISLR, a dataset with 4700 ISL words and a model that learns from American Sign Language for better recognition; ISLTranslate, a dataset of 31,000 ISL-English sentence pairs for translation; and iSign, a benchmark with multiple tasks like video-to-text translation to aid ISL research. Our work aims to break communication barriers and promote inclusivity, with future efforts focused on expanding datasets, refining translation models, and supporting applications in areas like education and healthcare.
@@ -84,9 +85,9 @@ We are working to improve Indian Sign Language (ISL) processing by creating data
     }
 
     .slide img {
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
     }
 
     .dots {
@@ -158,4 +159,3 @@ We are working to improve Indian Sign Language (ISL) processing by creating data
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
 </div>
----
