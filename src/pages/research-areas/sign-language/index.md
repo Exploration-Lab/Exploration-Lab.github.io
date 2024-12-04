@@ -21,22 +21,25 @@ publications: [
         title: 'CISLR: Corpus for Indian Sign Language Recognition',
         authors: 'Abhinav Joshi , Ashwani Bhat , Pradeep S , Priya Gole , Shreyansh Agarwal , Shashwat Gupta , Ashutosh Modi',
         conference: 'Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing',
-        link: 'https://aclanthology.org/2022.emnlp-main.707/',
-        image: '/img/Posters/Sign-Language/CISLR.jpg'
+        image: '/img/Posters/Sign-Language/CISLR.jpg',
+        link: 'https://aclanthology.org/2022.emnlp-main.707/'
+        
     },
     {
         title: 'ISLTranslate: Dataset for Translating Indian Sign Language',
         authors: 'Abhinav Joshi,  Susmit Agrawal, Ashutosh Modi',
         conference: 'Findings of the Association for Computational Linguistics: ACL 2023',
-        link: 'https://aclanthology.org/2023.findings-acl.665/',
-        image: '/img/Posters/Sign-Language/EtiCor.jpg'
+        image: '/img/Posters/Sign-Language/EtiCor.jpg',
+        link: 'https://aclanthology.org/2023.findings-acl.665/'
+        
     },
     {
         title: 'iSign: A Benchmark for Indian Sign Language Processing',
         authors: 'Abhinav Joshi, Romit Mohanty, Mounika Kanakanti, Andesha Mangla, Sudeep Choudhary, Monali Barbate ,Ashutosh Modi',
         conference: 'Findings of the Association for Computational Linguistics: ACL 2024',
-        link: 'https://aclanthology.org/2024.findings-acl.643/',
-        image: '/img/Posters/Sign-Language/iSign.jpg'
+        image: '/img/Posters/Sign-Language/iSign.jpg',
+        link: 'https://aclanthology.org/2024.findings-acl.643/'
+        
     }
 ]
 datasets: [
@@ -44,24 +47,27 @@ datasets: [
         title: 'CISLR: Corpus for Indian Sign Language Recognition',
         description: '#',
         paper-link: 'https://aclanthology.org/2022.emnlp-main.707/',
-        link: 'https://github.com/Exploration-Lab/CISLR',
-        image: '/img/Posters/Sign-Language/CISLR.jpg'
+        image: '/img/Posters/Sign-Language/CISLR.jpg',
+        link: 'https://github.com/Exploration-Lab/CISLR'
+        
     },
     {
         title: 'ISLTranslate: Dataset for Translating Indian Sign Language',
         description: '#',
         paper: 'ISLTranslate: Dataset for Translating Indian Sign Language',
         paper-link: 'https://aclanthology.org/2023.findings-acl.665/',
-        link: 'https://github.com/Exploration-Lab/ISLTranslate',
-        image: '/img/Posters/Sign-Language/EtiCor.jpg'
+        image: '/img/Posters/Sign-Language/EtiCor.jpg',
+        link: 'https://github.com/Exploration-Lab/ISLTranslate'
+        
     },
     {
         title: 'iSign: A Benchmark for Indian Sign Language Processing',
         description: '#',
         paper: 'iSign: A Benchmark for Indian Sign Language Processing',
         paper-link: 'https://aclanthology.org/2024.findings-acl.643/',
-        link: 'https://exploration-lab.github.io/iSign/',
-        image: '/img/Posters/Sign-Language/iSign.jpg'
+        image: '/img/Posters/Sign-Language/iSign.jpg',
+        link: 'https://exploration-lab.github.io/iSign/'
+        
     }
 ]
 ---
@@ -86,8 +92,8 @@ We are working to improve Indian Sign Language (ISL) processing by creating data
 
     .slide img {
         width: auto; /* Set this to 'auto' if you want to maintain aspect ratio */
-        max-width: 400px; /* Adjust this to reduce the maximum width */
-        height: 500px; /* Set a specific height if needed; adjust to your preference */
+        max-width: 300px; /* Adjust this to reduce the maximum width */
+        height: 400px; /* Set a specific height if needed; adjust to your preference */
         margin: 0 auto;
     }
 

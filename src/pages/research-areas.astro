@@ -1,61 +1,3 @@
-<!-- ---
-// imports
-import '../scss/global.scss';
-import '../scss/research-areas.scss';
-
-// Component Imports
-import MainHead from '../components/MainHead.astro';
-import Navbar from '../components/Navbar.astro';
-
-// Constants
-const { title = 'Research Areas' } = Astro.props;
-
-const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a, b) => a.frontmatter.priority-b.frontmatter.priority);
----
-
-<html lang="en">
-	<head>
-		<MainHead />
-	</head>
-	<body>
-		<Navbar active="research" />
-        <div class="custom-container">
-			<h1>Research Areas</h1>
-			
-			{researchAreas.map(area => (
-				<div class="row mb-3">
-					<a href={area.url} style="text-decoration: none;">
-						<div class="card border-light" style="max-width: 100%;">
-							<div class="row">
-								{(area.frontmatter.priority %2 != 0) ? (
-									<div class="col-md-5 col-4">
-										<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="">
-									</div>
-									<div class="col-md-7 col-8 d-flex align-items-center">
-										<div class="card-body">	
-											<h5 class="card-title">{area.frontmatter.title}</h5>
-											<p class="card-text">{area.frontmatter.description}</p>
-										</div>
-									</div>
-								) : (
-									<div class="col-md-7 col-8 d-flex align-items-center">
-										<div class="card-body">
-											<h5 class="card-title">{area.frontmatter.title}</h5>
-											<p class="card-text">{area.frontmatter.description}</p>
-										</div>
-									</div>
-									<div class="col-md-5 col-4">
-										<img src={area.frontmatter.image}  class="img-fluid rounded-start p-2" style="aspect-ratio: 1 / 1;" alt="">
-									</div>
-								)}
-							</div>
-						</div>
-					</a>
-				</div>
-			))}
-        </div>
-	</body>
-</html> -->
 ---
 // imports
 import '../scss/global.scss';
@@ -70,151 +12,59 @@ const { title = 'Research Areas' } = Astro.props;
 
 const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a, b) => a.frontmatter.priority-b.frontmatter.priority);
 ---
-
 <html lang="en">
-	<head>
-		<MainHead />
-	</head>
-	<body>
-		<Navbar active="research" />
-        <div class="custom-container">
-			<h1>Research Areas</h1>
+<head>
+    <MainHead />
+</head>
+<body>
+    <Navbar active="research" />
+    <div class="custom-container">
+        <h1>Research Areas</h1>
 
-			{researchAreas.map(area => (
-				<div class="row mb-3">
-					<a href={area.url} style="text-decoration: none;">
-						<div class="card border-light" style="max-width: 100%;">
-							<div class="row">
-								{(area.frontmatter.priority %2 !== 0) ? (
-									<div class="col-md-5 col-4">
-										<img 
-											src={area.frontmatter.image}  
-											class="img-fluid rounded-start p-2 lazy-load" 
-											style="aspect-ratio: 1 / 1;" 
-											alt={area.frontmatter.title} 
-											loading="lazy"
-										>
-									</div>
-									<div class="col-md-7 col-8 d-flex align-items-center">
-										<div class="card-body">	
-											<h5 class="card-title">{area.frontmatter.title}</h5>
-											<p class="card-text">{area.frontmatter.description}</p>
-										</div>
-									</div>
-								) : (
-									<div class="col-md-7 col-8 d-flex align-items-center">
-										<div class="card-body">
-											<h5 class="card-title">{area.frontmatter.title}</h5>
-											<p class="card-text">{area.frontmatter.description}</p>
-										</div>
-									</div>
-									<div class="col-md-5 col-4">
-										<img 
-											src={area.frontmatter.image}  
-											class="img-fluid rounded-start p-2 lazy-load" 
-											style="aspect-ratio: 1 / 1;" 
-											alt={area.frontmatter.title} 
-											loading="lazy"
-										>
-									</div>
-								)}
-							</div>
-						</div>
-					</a>
-				</div>
-			))}
-
-			<!-- Place the slideshow at the bottom -->
-			<div class="slideshow-container mt-5">
-				{researchAreas.map(area => (
-					<div class="slide">
-						<img 
-							src={area.frontmatter.image} 
-							alt={area.frontmatter.title} 
-							class="img-fluid rounded" 
-							loading="lazy" 
-						>
-					</div>
-				))}
-			</div>
-
-			<div class="dots">
-				{researchAreas.map((_, index) => (
-					<span class="dot" onclick={`currentSlide(${index + 1})`}></span>
-				))}
-			</div>
-        </div>
-
-        <script>
-            let currentIndex = 0;
-
-            function showSlides() {
-                const slides = document.getElementsByClassName("slide");
-                const dots = document.getElementsByClassName("dot");
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                currentIndex++;
-                if (currentIndex > slides.length) currentIndex = 1;
-                for (let i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[currentIndex - 1].style.display = "block";
-                dots[currentIndex - 1].className += " active";
-                setTimeout(showSlides, 3000); // Adjust timing as needed
-            }
-
-            document.addEventListener("DOMContentLoaded", showSlides);
-        </script>
-
-        <style>
-            /* General Styling */
-            .slideshow-container {
-                position: relative;
-                max-width: 90%;
-                margin: 2rem auto;
-                text-align: center;
-            }
-
-            .slide {
-                display: none;
-                animation: fade 1.5s ease-in-out;
-            }
-
-            .slide img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            .dots {
-                text-align: center;
-                margin-top: 15px;
-            }
-
-            .dot {
-                cursor: pointer;
-                height: 12px;
-                width: 12px;
-                margin: 5px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-            }
-
-            .dot.active {
-                background-color: #717171;
-            }
-
-            @keyframes fade {
-                from {
-                    opacity: 0.4;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
-        </style>
-	</body>
+        {researchAreas.map(area => (
+            <div class="row mb-3">
+                <a href={area.url} style="text-decoration: none;">
+                    <div class="card border-light" style="max-width: 100%;">
+                        <div class="row">
+                            {(area.frontmatter.priority % 2 !== 0) ? (
+                                <>
+                                    <div class="col-md-5 col-4">
+                                        <img 
+                                            src={area.frontmatter.image} 
+                                            class="img-fluid rounded-start p-2" 
+                                            style="aspect-ratio: 1 / 1;" 
+                                            alt={`Image for ${area.frontmatter.title}`} />
+                                    </div>
+                                    <div class="col-md-7 col-8 d-flex align-items-center">
+                                        <div class="card-body">	
+                                            <h5 class="card-title">{area.frontmatter.title}</h5>
+                                            <p class="card-text">{area.frontmatter.description}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div class="col-md-7 col-8 d-flex align-items-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{area.frontmatter.title}</h5>
+                                            <p class="card-text">{area.frontmatter.description}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-4">
+                                        <img 
+                                            src={area.frontmatter.image} 
+                                            class="img-fluid rounded-start p-2" 
+                                            style="aspect-ratio: 1 / 1;" 
+                                            alt={`Image for ${area.frontmatter.title}`} />
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        ))}
+    </div>
+</body>
 </html>
+
