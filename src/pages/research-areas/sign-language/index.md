@@ -4,9 +4,6 @@ title: 'Indian Sign Language Generation and Translation'
 priority: 1
 description: 'A small description about the things handled in Sign '
 image: '/img/research/isl.jpg'
-# Indian Sign Language
-
-We are working to improve Indian Sign Language (ISL) processing by creating datasets and models that bridge the communication gap for the hard-of-hearing community. ISL, used by millions, lacks the resources needed for tasks like machine translation and recognition, leaving it behind languages such as American Sign Language. To address this, we developed CISLR, a dataset with 4700 ISL words and a model that learns from American Sign Language for better recognition; ISLTranslate, a dataset of 31,000 ISL-English sentence pairs for translation; and iSign, a benchmark with multiple tasks like video-to-text translation to aid ISL research. Our work aims to break communication barriers and promote inclusivity, with future efforts focused on expanding datasets, refining translation models, and supporting applications in areas like education and healthcare.
 items: [
     {
         key: 'publications',
@@ -68,8 +65,10 @@ datasets: [
         image: '/img/Posters/Sign-Language/iSign.jpg'
     }
 ]
+# Indian Sign Language
 
-
+We are working to improve Indian Sign Language (ISL) processing by creating datasets and models that bridge the communication gap for the hard-of-hearing community. ISL, used by millions, lacks the resources needed for tasks like machine translation and recognition, leaving it behind languages such as American Sign Language. To address this, we developed CISLR, a dataset with 4700 ISL words and a model that learns from American Sign Language for better recognition; ISLTranslate, a dataset of 31,000 ISL-English sentence pairs for translation; and iSign, a benchmark with multiple tasks like video-to-text translation to aid ISL research. Our work aims to break communication barriers and promote inclusivity, with future efforts focused on expanding datasets, refining translation models, and supporting applications in areas like education and healthcare.
+---
 <style>
     /* General styling for slideshow */
     .slideshow-container {
@@ -159,4 +158,4 @@ datasets: [
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
 </div>
----
+
