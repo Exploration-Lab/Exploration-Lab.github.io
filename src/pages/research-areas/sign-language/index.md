@@ -1,7 +1,7 @@
 ---
 layout: '../../../layouts/research-area.astro'
-title: 'Indian Sign Language Generation and Translation'
-priority: 1
+title: 'Indian Sign Language'
+priority: 6
 description: 'When words are out of reach, the hands sing—sign language is the art of giving silence its voice.'
 image: '/img/research/isl.jpg'
 items: [

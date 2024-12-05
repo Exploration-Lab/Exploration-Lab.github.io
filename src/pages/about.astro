@@ -1,9 +1,7 @@
 ---
-// Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
 
-// Constants
 const title = 'About';
 ---
 <html lang="en">
@@ -40,7 +38,8 @@ const title = 'About';
         }
         .slide img {
             width: 100%;
-            height: auto;
+            height: 400px; /* Set a consistent height */
+            object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
         }
         .dots {
             text-align: center;
@@ -100,24 +99,32 @@ const title = 'About';
         <!-- Slideshow Section -->
         <div class="slideshow-container">
             <div class="slide">
-                <img src="/img/EL-Gallary/ACL.jpg" alt="Slide 1">
+                <img src="/img/EL-Gallary/EL-project.jpg" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="/img/EL-Gallary/group-pic.jpg" alt="Slide 2">
+                <img src="/img/EL-Gallary/ACL.jpg" alt="Slide 2">
             </div>
             <div class="slide">
-                <img src="/img/EL-Gallary/signlanguage.jpg" alt="Slide 3">
+                <img src="/img/EL-Gallary/group-pic.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="/img/EL-Gallary/diwali.jpg" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="/img/EL-Gallary/diwali2.jpg" alt="Slide 5">
             </div>
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
         </div>
 
         <!-- About Section -->
         <div class="about-section">
-            <h1> </h1>
+            <h1>Exploration Lab</h1>
             <p>
                 Welcome to the Exploration Lab at IIT Kanpur! We focus on Natural Language Understanding and are dedicated to developing innovative ways 
                 to help machines interpret and process human language more effectively. Our research explores a variety of cutting-edge areas, including:
