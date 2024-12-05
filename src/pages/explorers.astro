@@ -4,6 +4,7 @@ import '../scss/explorers.scss';
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 
 // Constants
 const { title = 'Explorers' } = Astro.props;
@@ -69,6 +70,7 @@ const grads = [
 ];
 const ugs = [];
 const ras = [];
+const Alumini = [];
 ---
 
 <html lang="en">
@@ -244,5 +246,6 @@ const ras = [];
 		<script>
 			import 'bootstrap/js/dist/collapse'
 		</script>
+		<Footer />
 	</body>
 </html>

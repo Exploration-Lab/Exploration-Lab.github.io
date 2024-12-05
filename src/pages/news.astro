@@ -2,9 +2,8 @@
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
-
+import Footer from '../components/Footer.astro';
 // Constants
-const title = 'News';
 const newsItems = [
     { title: "IIT Kanpur Hosts International Conference on AI", date: "2024-12-01" },
     { title: "New Research Breakthrough in Artificial Intelligence", date: "2024-11-28" },
@@ -24,135 +23,47 @@ const newsItems = [
         }
         .custom-container {
             padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
             color: #2c3e50;
-        }
-        .news-ticker {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 1rem;
-            font-size: 1.2rem;
-            overflow: hidden;
-            position: relative;
-        }
-        .ticker-items {
-            display: flex;
-            animation: ticker 10s linear infinite;
-            white-space: nowrap;
-        }
-        .ticker-item {
-            margin-right: 2rem;
-        }
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        .featured-news, .latest-news {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .featured-news h2, .latest-news h2 {
-            color: #3498db;
             margin-bottom: 1rem;
         }
         .news-card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .news-card img {
-            width: 80px;
-            height: 80px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            margin-right: 1rem;
+            background-color: #f9f9f9;
         }
-        .news-card .content {
-            flex: 1;
-        }
-        .news-card .content h3 {
-            margin: 0;
-            font-size: 1.2rem;
+        .news-card h3 {
+            margin: 0 0 0.5rem;
             color: #2c3e50;
+            font-size: 1.2rem;
         }
-        .news-card .content p {
+        .news-card p {
             margin: 0;
             font-size: 0.9rem;
             color: #7f8c8d;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #e74c3c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .btn:hover {
-            background-color: #c0392b;
         }
     </style>
 </head>
 <body>
     <Navbar active="news" />
     <div class="custom-container">
-        <h1>{title}</h1>
-
-        <!-- News Ticker -->
-        <div class="news-ticker">
-            <div class="ticker-items">
-                {newsItems.map((item) => (
-                    <span class="ticker-item">{item.date}: {item.title}</span>
-                ))}
-            </div>
-        </div>
-
-        <!-- Featured News Section -->
-        <div class="featured-news">
-            <h2>Featured News</h2>
+        <h1>News</h1>
+        {newsItems.map((item) => (
             <div class="news-card">
-                <img src="https://via.placeholder.com/80" alt="News Image" />
-                <div class="content">
-                    <h3>International AI Conference at IIT Kanpur</h3>
-                    <p>Date: 2024-12-01</p>
-                </div>
-                <a href="#" class="btn">Read More</a>
+                <h3>{item.title}</h3>
+                <p>Date: {item.date}</p>
             </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/80" alt="News Image" />
-                <div class="content">
-                    <h3>New Research Breakthrough in Artificial Intelligence</h3>
-                    <p>Date: 2024-11-28</p>
-                </div>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <!-- Latest News Section -->
-        <div class="latest-news">
-            <h2>Latest News</h2>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/80" alt="News Image" />
-                <div class="content">
-                    <h3>Prestigious Research Medal Awarded to Professor</h3>
-                    <p>Date: 2024-11-25</p>
-                </div>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/80" alt="News Image" />
-                <div class="content">
-                    <h3>Upcoming Workshop: Data Science in Action</h3>
-                    <p>Date: 2024-12-10</p>
-                </div>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
+        ))}
     </div>
+    <Footer />
 </body>
 </html>

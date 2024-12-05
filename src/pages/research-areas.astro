@@ -6,7 +6,7 @@ import '../scss/research-areas.scss';
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
-
+import Footer from '../components/Footer.astro';
 // Constants
 const { title = 'Research Areas' } = Astro.props;
 
@@ -65,6 +65,7 @@ const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a
             </div>
         ))}
     </div>
+    <Footer />
 </body>
 </html>
 

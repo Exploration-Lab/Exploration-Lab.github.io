@@ -1,0 +1,52 @@
+---
+// Footer Component
+const socialLinks = {
+    email: "mailto:ashutoshm@cse.iitk.ac.in",
+    twitter: "https://twitter.com/your-profile",
+    linkedin: "https://linkedin.com/in/your-profile",
+    github: "https://github.com/Exploration-Lab",
+};
+---
+<footer class="footer">
+    <div class="container">
+        <div class="social-links">
+            <a href={socialLinks.email} target="_blank" rel="noopener noreferrer" title="Email">
+                <img src="/public/img/icon/mail.jpeg" alt="Email" class="icon" />
+            </a>
+            <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" title="Twitter">
+                <img src="/public/img/icon/x.png" alt="Twitter" class="icon" />
+            </a>
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <img src="/public/img/icon/Linkedin.png" alt="LinkedIn" class="icon" />
+            </a>
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" title="GitHub">
+                <img src="/public/img/icon/github.png" alt="GitHub" class="icon" />
+            </a>
+        </div>
+        <p class="footer-text">&copy; {new Date().getFullYear()} Exploration Lab. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .social-links {
+        margin-bottom: 1rem;
+    }
+    .social-links a {
+        margin: 0 1rem;
+        display: inline-block;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+    .footer-text {
+        font-size: 0.9rem;
+        color: #bdc3c7;
+    }
+</style>
