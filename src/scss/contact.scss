@@ -1,0 +1,54 @@
+body {
+    background-color: #f8f9fa;
+}
+.custom-container {
+    width: 90%;
+    padding: 0px 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    
+    @media screen and (min-width: 720px) {
+        width: 50%
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    // color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+h2 {
+    font-size: 1.8rem;
+    // color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+p, a {
+    font-size: 1rem;
+    // color: #555;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        font-size: 1rem;
+        color: #555;
+    }
+}
