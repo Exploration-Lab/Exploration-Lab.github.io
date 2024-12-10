@@ -2,6 +2,8 @@
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Navbar.astro';
+
+import '../scss/contact.scss';
 import Footer from '../components/Footer.astro';
 
 // Constants
@@ -11,63 +13,6 @@ const title = 'Contact';
 <html lang="en">
 <head>
     <MainHead />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .custom-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            line-height: 1.8;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        h2 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-        p, a {
-            font-size: 1rem;
-            color: #555;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        .social-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-        }
-        .social-item img {
-            width: 30px;
-            height: 30px;
-        }
-        .social-item span {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
 </head>
 <body>
     <Navbar active="contact" />
@@ -105,7 +50,7 @@ const title = 'Contact';
             <h2>Connect with Us</h2>
             <div class="social-links">
                 <a href="https://twitter.com/example" target="_blank" class="social-item">
-                    <img src="/img/icon/x.png" alt="Twitter">
+                    <img src="/img/icon/x_twitter.png" alt="Twitter">
                     <span>Twitter</span>
                 </a>
                 <a href="https://linkedin.com/in/example" target="_blank" class="social-item">
