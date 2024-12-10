@@ -38,7 +38,7 @@ const phds = [
 	{
 		name: 'Sanjeet Singh',
 		link: 'https://sites.google.com/view/sanjeet-singh/',
-		photo: '/img/team/sanjeet_sq.jpg',
+		photo: '/img/profile-picture/Sanjeet-Singh.jpg',
 		desc: '2023 (Computer Science Engineering - IIT Kanpur)'
 	},
 	{
@@ -159,6 +159,22 @@ const alumini = [
 <html lang="en">
 	<head>
 		<MainHead />
+		<style>
+			body {
+				font-family: 'Arial', sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
+			.card img {
+				object-fit: cover; /* Ensures the image fills the area without distortion */
+                width: 100%; /* Matches the parent element width */
+                height: 100%; /* Matches the parent element height */
+                aspect-ratio: 1/1; /* Makes the image square */
+                border-radius: 10%; 
+			}
+
+		</style>
 	</head>
 	<body>
 		<Navbar active="explorers" />
