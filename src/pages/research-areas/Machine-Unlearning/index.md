@@ -2,8 +2,8 @@
 layout: '../../../layouts/research-area.astro'
 title: 'Machine Unlearning'
 priority: 2
-description: 'A small description about the things handled in Legal NLP'
-image: '/img/research/machine-unlearning.png'
+description: 'LLMs tend to memorize information including PI information leading to privacy issues. Machine Unlearning is a new setup wherein a pretrained model is made to "forget" certain information regarding some users who request their data to be removed.'
+image: '/img/research/unlearning.png'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'
 items: [
     {
@@ -24,10 +24,10 @@ items: [
 ]
 publications: [
     {
-        title: 'Publication 1',
-        authors: 'Author 1, Author 2',
-        conference: 'Conference 1',
-        link: '#',
+        title: 'ReLU: Towards Robust Evaluation of Unlearning in LLMs via Data Transformations',
+        authors: 'Abhinav Joshi, Shaswati Saha, Divyaksh Shukla, Sriram Vema, Harsh Jhamtani, Manas Gaur, Ashutosh Modi',
+        conference: 'Findings of the Association for Computational Linguistics: EMNLP 2024',
+        link: 'https://aclanthology.org/2024.findings-emnlp.706/',
         image: ''
     }
 ]
@@ -43,15 +43,15 @@ patents: [
 ]
 datasets: [
     {
-        title: 'Dataset/Resource 1',
-        description: 'description',
-        paper: 'paper',
-        paper-link: '#',
-        link: '#',
+        title: 'ReLU: Towards Robust Evaluation of Unlearning in LLMs via Data Transformations',
+        description: '',
+        paper: 'ReLU: Towards Robust Evaluation of Unlearning in LLMs via Data Transformations',
+        paper-link: 'https://aclanthology.org/2024.findings-emnlp.706/',
+        link: 'https://exploration-lab.github.io/ReLU/',
         image: ''
     }
 ]
 ---
-# Legal NLP
+# Machine Unlearning
 
-A small description about the things handled in Legal NLP
+LLMs tend to memorize information including PI information leading to privacy issues. Machine Unlearning is a new setup wherein a pretrained model is made to "forget" certain information regarding some users who request their data to be removed.
