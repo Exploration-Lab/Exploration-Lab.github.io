@@ -24,11 +24,25 @@ items: [
 ]
 publications: [
     {
-        title: 'Publication 1',
-        authors: 'Author 1, Author 2',
-        conference: 'Conference 1',
-        link: '#',
-        image: ''
+        title: 'IL-TUR: Benchmark for Indian Legal Text Understanding and Reasoning',
+        authors: 'Abhinav Joshi, Shounak Paul,  Akshat Sharma, Pawan Goyal, Saptarshi Ghosh, Ashutosh Modi',
+        conference: 'Proceedings of the 62st Annual Meeting of the Association for Computational Linguistics',
+        link: 'https://arxiv.org/pdf/2407.05399',
+        image: '#'
+    },
+    {
+        title: 'U-CREAT: Unsupervised Case Retrieval using Events extrAcTion',
+        authors: 'Abhinav Joshi, Akshat Sharma, Sai Kiran Tanikella,  Ashutosh Modi',
+        conference: 'Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics',
+        link: 'https://aclanthology.org/2023.acl-long.777/',
+        image: '#'
+    },
+    {
+        title: 'SemEval 2023 Task 6: LegalEval - Understanding Legal Texts',
+        authors: 'Ashutosh Modi, Prathamesh Kalamkar, Saurabh Karn, Aman Tiwari, Abhinav Joshi, Sai Kiran Tanikella, Shouvik Kumar Guha, Sachin Malhan, and Vivek Raghavan',
+        conference: 'Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)',
+        link: 'https://arxiv.org/abs/2304.09548',
+        image: '#'
     }
 ]
 patents: [
@@ -43,11 +57,11 @@ patents: [
 ]
 datasets: [
     {
-        title: 'Dataset/Resource 1',
-        description: 'description',
-        paper: 'paper',
-        paper-link: '#',
-        link: '#',
+        title: 'IL-TUR: Benchmark for Indian Legal Text Understanding and Reasoning',
+        description: '',
+        paper: 'IL-TUR: Benchmark for Indian Legal Text Understanding and Reasoning',
+        paper-link: 'https://arxiv.org/pdf/2407.05399',
+        link: 'https://huggingface.co/datasets/Exploration-Lab/IL-TUR',
         image: ''
     }
 ]
