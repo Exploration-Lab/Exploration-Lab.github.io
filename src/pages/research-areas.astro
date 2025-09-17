@@ -21,6 +21,8 @@ const researchAreas = (await Astro.glob('./research-areas/**/index.md')).sort((a
     <div class="custom-container">
         <h1>Research Areas</h1>
 
+        <img src="/img/research/overview.webp" alt="Research Areas Overview" class="img-fluid mb-4" />
+
         {researchAreas.map(area => (
             <div class="row mb-3">
                 <a href={area.url} style="text-decoration: none;">
