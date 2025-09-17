@@ -60,7 +60,19 @@ const title = 'About';
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change slide every 3 seconds
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+        function currentSlide(n) {
+            slideIndex = n - 1; // Adjust for zero-based index
+            showSlides();
+        }
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
         }
         document.addEventListener("DOMContentLoaded", showSlides);
     </script>
@@ -70,6 +82,7 @@ const title = 'About';
     <div class="custom-container">
         <!-- Slideshow Section -->
         <div class="slideshow-container">
+            <button class="nav-btn prev" onclick="prevSlide()">&#10094;</button>
             <div class="slide">
                 <img src="/img/EL-Gallary/EL-project.png" alt="Slide 1">
             </div>
@@ -85,6 +98,8 @@ const title = 'About';
             <div class="slide">
                 <img src="/img/EL-Gallary/diwali2.jpg" alt="Slide 5">
             </div>
+             <!-- Right Arrow Button -->
+            <button class="nav-btn next" onclick="nextSlide()">&#10095;</button>
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
