@@ -1,7 +1,7 @@
 ---
 layout: '../../../layouts/research-area.astro'
 title: 'Social Alignment in LLMs'
-priority: 4
+priority: 6
 description: 'A small description about the things handled in Social Alignment'
 image: '/img/research/social-alignment.png'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'

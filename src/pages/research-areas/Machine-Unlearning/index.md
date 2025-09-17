@@ -1,7 +1,7 @@
 ---
 layout: '../../../layouts/research-area.astro'
 title: 'Machine Unlearning'
-priority: 2
+priority: 3
 description: 'LLMs tend to memorize information including PI information leading to privacy issues. Machine Unlearning is a new setup wherein a pretrained model is made to "forget" certain information regarding some users who request their data to be removed.'
 image: '/img/research/unlearning.png'
 # image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Robot-judge.svg'

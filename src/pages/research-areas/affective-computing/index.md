@@ -1,7 +1,7 @@
 ---
 layout: '../../../layouts/research-area.astro'
 title: 'Affective Computing'
-priority: 5
+priority: 4
 description: 'Language and vocabulary have emerged from emotions that were perceived. In this research we try to walk backwards to analyse emotions from language.'
 image: '/img/research/Affective-computing.jpg'
 items: [
