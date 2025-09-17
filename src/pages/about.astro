@@ -53,21 +53,21 @@ const title = 'About';
         let slideIndex = 0;
         let slideTimeout; // To handle the auto-advance timeout
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            slideTimeout = setTimeout(showSlides, 5000); // Change slide every 5 seconds
-        }
+        // function showSlides() {
+        //     let slides = document.getElementsByClassName("slide");
+        //     let dots = document.getElementsByClassName("dot");
+        //     for (let i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none";
+        //     }
+        //     slideIndex++;
+        //     if (slideIndex > slides.length) { slideIndex = 1; }
+        //     for (let i = 0; i < dots.length; i++) {
+        //         dots[i].className = dots[i].className.replace(" active", "");
+        //     }
+        //     slides[slideIndex - 1].style.display = "block";
+        //     dots[slideIndex - 1].className += " active";
+        //     slideTimeout = setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        // }
         function changeSlide(direction) {
             // Clear the auto-advance timeout to prevent conflicts
             clearTimeout(slideTimeout);
@@ -99,8 +99,8 @@ const title = 'About';
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
             
-            // Restart auto-advance timer
-            slideTimeout = setTimeout(showSlides, 5000);
+            // // Restart auto-advance timer
+            // slideTimeout = setTimeout(showSlides, 5000);
         }
 
         function currentSlide(n) {
@@ -127,10 +127,10 @@ const title = 'About';
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
             
-            // Restart auto-advance timer
-            slideTimeout = setTimeout(showSlides, 5000);
+            // // Restart auto-advance timer
+            // slideTimeout = setTimeout(showSlides, 5000);
         }
-        document.addEventListener("DOMContentLoaded", showSlides);
+        // document.addEventListener("DOMContentLoaded", showSlides);
         document.querySelector("button.prev").addEventListener("click", () => changeSlide(-1));
         document.querySelector("button.next").addEventListener("click", () => changeSlide(1));
         document.querySelectorAll(".dot").forEach((dot, index) => {
